@@ -9,6 +9,14 @@
     "content_category": null,
     "has_parameters": false
   },
+  "python": {
+    "version": "3.8.17",
+    "package_manager": {
+      "name": "pip",
+      "version": "23.0.1",
+      "package_file": "requirements.txt"
+    }
+  },
   "packages": {
     "DBI": {
       "Source": "CRAN",
@@ -67,6 +75,39 @@
         "Repository": "RSPM",
         "Date/Publication": "2024-04-04 05:03:17 UTC",
         "Built": "R 4.4.0; ; 2024-08-23 00:07:38 UTC; unix"
+      }
+    },
+    "Matrix": {
+      "Source": "CRAN",
+      "Repository": "http://rspm/default/latest",
+      "description": {
+        "Package": "Matrix",
+        "Version": "1.7-0",
+        "VersionNote": "do also bump src/version.h, inst/include/Matrix/version.h",
+        "Date": "2024-03-16",
+        "Priority": "recommended",
+        "Title": "Sparse and Dense Matrix Classes and Methods",
+        "Description": "A rich hierarchy of sparse and dense matrix classes,\n\tincluding general, symmetric, triangular, and diagonal matrices\n\twith numeric, logical, or pattern entries.  Efficient methods for\n\toperating on such matrices, often wrapping the 'BLAS', 'LAPACK',\n\tand 'SuiteSparse' libraries.",
+        "License": "GPL (>= 2) | file LICENCE",
+        "URL": "https://Matrix.R-forge.R-project.org",
+        "BugReports": "https://R-forge.R-project.org/tracker/?atid=294&group_id=61",
+        "Contact": "Matrix-authors@R-project.org",
+        "Authors@R": "\n\tc(person(\"Douglas\", \"Bates\", role = \"aut\",\n\t         comment = c(ORCID = \"0000-0001-8316-9503\")),\n\t  person(\"Martin\", \"Maechler\", role = c(\"aut\", \"cre\"),\n\t         email = \"mmaechler+Matrix@gmail.com\",\n\t         comment = c(ORCID = \"0000-0002-8685-9910\")),\n\t  person(\"Mikael\", \"Jagan\", role = \"aut\",\n\t         comment = c(ORCID = \"0000-0002-3542-2938\")),\n\t  person(\"Timothy A.\", \"Davis\", role = \"ctb\",\n\t         comment = c(ORCID = \"0000-0001-7614-6899\",\n\t                     \"SuiteSparse libraries\",\n\t                     \"collaborators listed in dir(system.file(\\\"doc\\\", \\\"SuiteSparse\\\", package=\\\"Matrix\\\"), pattern=\\\"License\\\", full.names=TRUE, recursive=TRUE)\")),\n\t  person(\"George\", \"Karypis\", role = \"ctb\",\n\t         comment = c(ORCID = \"0000-0003-2753-1437\",\n\t                     \"METIS library\",\n\t                     \"Copyright: Regents of the University of Minnesota\")),\n\t  person(\"Jason\", \"Riedy\", role = \"ctb\",\n\t         comment = c(ORCID = \"0000-0002-4345-4200\",\n\t                     \"GNU Octave's condest() and onenormest()\",\n\t                     \"Copyright: Regents of the University of California\")),\n\t  person(\"Jens\", \"Oehlschlägel\", role = \"ctb\",\n\t         comment = \"initial nearPD()\"),\n\t  person(\"R Core Team\", role = \"ctb\",\n\t         comment = \"base R's matrix implementation\"))",
+        "Depends": "R (>= 4.4.0), methods",
+        "Imports": "grDevices, graphics, grid, lattice, stats, utils",
+        "Suggests": "MASS, datasets, sfsmisc, tools",
+        "Enhances": "SparseM, graph",
+        "LazyData": "no",
+        "LazyDataNote": "not possible, since we use data/*.R and our S4 classes",
+        "BuildResaveData": "no",
+        "Encoding": "UTF-8",
+        "NeedsCompilation": "yes",
+        "Packaged": "2024-03-19 17:15:14 UTC; maechler",
+        "Author": "Douglas Bates [aut] (<https://orcid.org/0000-0001-8316-9503>),\n  Martin Maechler [aut, cre] (<https://orcid.org/0000-0002-8685-9910>),\n  Mikael Jagan [aut] (<https://orcid.org/0000-0002-3542-2938>),\n  Timothy A. Davis [ctb] (<https://orcid.org/0000-0001-7614-6899>,\n    SuiteSparse libraries, collaborators listed in\n    dir(system.file(\"doc\", \"SuiteSparse\", package=\"Matrix\"),\n    pattern=\"License\", full.names=TRUE, recursive=TRUE)),\n  George Karypis [ctb] (<https://orcid.org/0000-0003-2753-1437>, METIS\n    library, Copyright: Regents of the University of Minnesota),\n  Jason Riedy [ctb] (<https://orcid.org/0000-0002-4345-4200>, GNU\n    Octave's condest() and onenormest(), Copyright: Regents of the\n    University of California),\n  Jens Oehlschlägel [ctb] (initial nearPD()),\n  R Core Team [ctb] (base R's matrix implementation)",
+        "Maintainer": "Martin Maechler <mmaechler+Matrix@gmail.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2024-04-26 12:03:02 UTC",
+        "Built": "R 4.4.1; x86_64-pc-linux-gnu; 2024-06-14 09:02:46 UTC; unix"
       }
     },
     "PKI": {
@@ -142,6 +183,34 @@
         "Repository": "RSPM",
         "Date/Publication": "2024-11-02 20:10:02 UTC",
         "Built": "R 4.4.0; x86_64-pc-linux-gnu; 2024-11-03 04:03:00 UTC; unix"
+      }
+    },
+    "RcppTOML": {
+      "Source": "CRAN",
+      "Repository": "http://rspm/default/latest",
+      "description": {
+        "Package": "RcppTOML",
+        "Type": "Package",
+        "Title": "'Rcpp' Bindings to Parser for \"Tom's Obvious Markup Language\"",
+        "Version": "0.2.2",
+        "Date": "2023-01-29",
+        "Author": "Dirk Eddelbuettel",
+        "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
+        "Description": "The configuration format defined by 'TOML' (which expands to\n \"Tom's Obvious Markup Language\") specifies an excellent format\n (described at <https://toml.io/en/>) suitable for both human editing\n as well as the common uses of a machine-readable format. This package\n uses 'Rcpp' to connect to the 'toml++' parser written by Mark Gillard\n to R.",
+        "SystemRequirements": "A C++17 compiler",
+        "BugReports": "https://github.com/eddelbuettel/rcpptoml/issues",
+        "URL": "http://dirk.eddelbuettel.com/code/rcpp.toml.html",
+        "Imports": "Rcpp (>= 0.11.5)",
+        "Depends": "R (>= 3.3.0)",
+        "LinkingTo": "Rcpp",
+        "Suggests": "tinytest",
+        "License": "GPL (>= 2)",
+        "NeedsCompilation": "yes",
+        "Packaged": "2023-01-29 21:10:46 UTC; edd",
+        "Repository": "RSPM",
+        "Date/Publication": "2023-01-29 22:12:06",
+        "Encoding": "UTF-8",
+        "Built": "R 4.4.0; x86_64-pc-linux-gnu; 2024-11-03 04:43:55 UTC; unix"
       }
     },
     "askpass": {
@@ -646,6 +715,35 @@
         "Built": "R 4.4.0; x86_64-pc-linux-gnu; 2024-10-01 04:13:06 UTC; unix"
       }
     },
+    "here": {
+      "Source": "CRAN",
+      "Repository": "http://rspm/default/latest",
+      "description": {
+        "Package": "here",
+        "Title": "A Simpler Way to Find Your Files",
+        "Version": "1.0.1",
+        "Date": "2020-12-13",
+        "Authors@R": "\n    c(person(given = \"Kirill\",\n             family = \"M\\u00fcller\",\n             role = c(\"aut\", \"cre\"),\n             email = \"krlmlr+r@mailbox.org\",\n             comment = c(ORCID = \"0000-0002-1416-3412\")),\n      person(given = \"Jennifer\",\n             family = \"Bryan\",\n             role = \"ctb\",\n             email = \"jenny@rstudio.com\",\n             comment = c(ORCID = \"0000-0002-6983-2759\")))",
+        "Description": "Constructs paths to your project's files.\n    Declare the relative path of a file within your project with 'i_am()'.\n    Use the 'here()' function as a drop-in replacement for 'file.path()',\n    it will always locate the files relative to your project root.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://here.r-lib.org/, https://github.com/r-lib/here",
+        "BugReports": "https://github.com/r-lib/here/issues",
+        "Imports": "rprojroot (>= 2.0.2)",
+        "Suggests": "conflicted, covr, fs, knitr, palmerpenguins, plyr, readr,\nrlang, rmarkdown, testthat, uuid, withr",
+        "VignetteBuilder": "knitr",
+        "Encoding": "UTF-8",
+        "LazyData": "true",
+        "RoxygenNote": "7.1.1.9000",
+        "Config/testthat/edition": "3",
+        "NeedsCompilation": "no",
+        "Packaged": "2020-12-13 06:59:33 UTC; kirill",
+        "Author": "Kirill Müller [aut, cre] (<https://orcid.org/0000-0002-1416-3412>),\n  Jennifer Bryan [ctb] (<https://orcid.org/0000-0002-6983-2759>)",
+        "Maintainer": "Kirill Müller <krlmlr+r@mailbox.org>",
+        "Repository": "RSPM",
+        "Date/Publication": "2020-12-13 07:30:02 UTC",
+        "Built": "R 4.4.0; ; 2024-08-22 23:00:13 UTC; unix"
+      }
+    },
     "highr": {
       "Source": "CRAN",
       "Repository": "http://rspm/default/latest",
@@ -928,6 +1026,35 @@
         "Built": "R 4.4.0; x86_64-pc-linux-gnu; 2024-11-03 04:48:39 UTC; unix"
       }
     },
+    "lattice": {
+      "Source": "CRAN",
+      "Repository": "http://rspm/default/latest",
+      "description": {
+        "Package": "lattice",
+        "Version": "0.22-6",
+        "Date": "2024-03-20",
+        "Priority": "recommended",
+        "Title": "Trellis Graphics for R",
+        "Authors@R": "c(person(\"Deepayan\", \"Sarkar\", role = c(\"aut\", \"cre\"),\n\t            email = \"deepayan.sarkar@r-project.org\",\n\t\t    comment = c(ORCID = \"0000-0003-4107-1553\")),\n              person(\"Felix\", \"Andrews\", role = \"ctb\"),\n\t      person(\"Kevin\", \"Wright\", role = \"ctb\", comment = \"documentation\"),\n\t      person(\"Neil\", \"Klepeis\", role = \"ctb\"),\n\t      person(\"Johan\", \"Larsson\", role = \"ctb\", comment = \"miscellaneous improvements\"),\n              person(\"Zhijian (Jason)\", \"Wen\", role = \"cph\", comment = \"filled contour code\"),\n              person(\"Paul\", \"Murrell\", role = \"ctb\", email = \"paul@stat.auckland.ac.nz\"),\n\t      person(\"Stefan\", \"Eng\", role = \"ctb\", comment = \"violin plot improvements\"),\n\t      person(\"Achim\", \"Zeileis\", role = \"ctb\", comment = \"modern colors\"),\n              person(\"Alexandre\", \"Courtiol\", role = \"ctb\", comment = \"generics for larrows, lpolygon, lrect and lsegments\")\n\t      )",
+        "Description": "A powerful and elegant high-level data visualization\n  system inspired by Trellis graphics, with an emphasis on\n  multivariate data. Lattice is sufficient for typical graphics needs,\n  and is also flexible enough to handle most nonstandard requirements.\n  See ?Lattice for an introduction.",
+        "Depends": "R (>= 4.0.0)",
+        "Suggests": "KernSmooth, MASS, latticeExtra, colorspace",
+        "Imports": "grid, grDevices, graphics, stats, utils",
+        "Enhances": "chron, zoo",
+        "LazyLoad": "yes",
+        "LazyData": "yes",
+        "License": "GPL (>= 2)",
+        "URL": "https://lattice.r-forge.r-project.org/",
+        "BugReports": "https://github.com/deepayan/lattice/issues",
+        "NeedsCompilation": "yes",
+        "Packaged": "2024-03-20 03:08:45 UTC; deepayan",
+        "Author": "Deepayan Sarkar [aut, cre] (<https://orcid.org/0000-0003-4107-1553>),\n  Felix Andrews [ctb],\n  Kevin Wright [ctb] (documentation),\n  Neil Klepeis [ctb],\n  Johan Larsson [ctb] (miscellaneous improvements),\n  Zhijian (Jason) Wen [cph] (filled contour code),\n  Paul Murrell [ctb],\n  Stefan Eng [ctb] (violin plot improvements),\n  Achim Zeileis [ctb] (modern colors),\n  Alexandre Courtiol [ctb] (generics for larrows, lpolygon, lrect and\n    lsegments)",
+        "Maintainer": "Deepayan Sarkar <deepayan.sarkar@r-project.org>",
+        "Repository": "CRAN",
+        "Date/Publication": "2024-03-20 06:10:02 UTC",
+        "Built": "R 4.4.1; x86_64-pc-linux-gnu; 2024-06-14 09:02:40 UTC; unix"
+      }
+    },
     "lazyeval": {
       "Source": "CRAN",
       "Repository": "http://rspm/default/latest",
@@ -1117,6 +1244,28 @@
         "Built": "R 4.4.0; ; 2024-04-25 02:22:14 UTC; unix"
       }
     },
+    "png": {
+      "Source": "CRAN",
+      "Repository": "http://rspm/default/latest",
+      "description": {
+        "Package": "png",
+        "Version": "0.1-8",
+        "Title": "Read and write PNG images",
+        "Author": "Simon Urbanek <Simon.Urbanek@r-project.org>",
+        "Maintainer": "Simon Urbanek <Simon.Urbanek@r-project.org>",
+        "Depends": "R (>= 2.9.0)",
+        "Description": "This package provides an easy and simple way to read, write and display bitmap images stored in the PNG format. It can read and write both files and in-memory raw vectors.",
+        "License": "GPL-2 | GPL-3",
+        "SystemRequirements": "libpng",
+        "URL": "http://www.rforge.net/png/",
+        "NeedsCompilation": "yes",
+        "Packaged": "2022-11-29 09:42:31 UTC; rforge",
+        "Repository": "RSPM",
+        "Date/Publication": "2022-11-29 11:12:53 UTC",
+        "Encoding": "UTF-8",
+        "Built": "R 4.4.0; x86_64-pc-linux-gnu; 2024-08-22 23:10:44 UTC; unix"
+      }
+    },
     "promises": {
       "Source": "CRAN",
       "Repository": "http://rspm/default/latest",
@@ -1206,6 +1355,37 @@
         "Built": "R 4.4.0; ; 2024-10-13 04:05:32 UTC; unix"
       }
     },
+    "reticulate": {
+      "Source": "CRAN",
+      "Repository": "http://rspm/default/latest",
+      "description": {
+        "Package": "reticulate",
+        "Type": "Package",
+        "Title": "Interface to 'Python'",
+        "Version": "1.40.0",
+        "Authors@R": "c(\n  person(\"Tomasz\", \"Kalinowski\", role = c(\"ctb\", \"cre\"),\n         email = \"tomasz@posit.co\"),\n  person(\"Kevin\", \"Ushey\", role = c(\"aut\"),\n         email = \"kevin@posit.co\"),\n  person(\"JJ\", \"Allaire\", role = c(\"aut\"), email = \"jj@posit.co\"),\n  person(\"RStudio\", role = c(\"cph\", \"fnd\")),\n  person(\"Yuan\", \"Tang\", role = c(\"aut\", \"cph\"),\n         email = \"terrytangyuan@gmail.com\",\n         comment = c(ORCID = \"0000-0001-5243-233X\")),\n  person(\"Dirk\", \"Eddelbuettel\", role = c(\"ctb\", \"cph\"),\n         email = \"edd@debian.org\"),\n  person(\"Bryan\", \"Lewis\", role = c(\"ctb\", \"cph\"),\n         email = \"blewis@illposed.net\"),\n  person(\"Sigrid\", \"Keydana\", role = c(\"ctb\"),\n         email = \"sigrid@posit.co\"),\n  person(\"Ryan\", \"Hafen\", role = c(\"ctb\", \"cph\"),\n         email = \"rhafen@gmail.com\"),\n  person(\"Marcus\", \"Geelnard\", role = c(\"ctb\", \"cph\"),\n         comment = \"TinyThread library, http://tinythreadpp.bitsnbites.eu/\")\n  )",
+        "Description": "Interface to 'Python' modules, classes, and functions. When calling\n    into 'Python', R data types are automatically converted to their equivalent 'Python'\n    types. When values are returned from 'Python' to R they are converted back to R\n    types. Compatible with all versions of 'Python' >= 2.7.",
+        "License": "Apache License 2.0",
+        "URL": "https://rstudio.github.io/reticulate/,\nhttps://github.com/rstudio/reticulate",
+        "BugReports": "https://github.com/rstudio/reticulate/issues",
+        "SystemRequirements": "Python (>= 2.7.0)",
+        "Encoding": "UTF-8",
+        "Depends": "R (>= 3.5)",
+        "Imports": "Matrix, Rcpp (>= 1.0.7), RcppTOML, graphics, here, jsonlite,\nmethods, png, rappdirs, utils, rlang, withr",
+        "Suggests": "callr, knitr, glue, cli, rmarkdown, pillar, testthat",
+        "LinkingTo": "Rcpp",
+        "RoxygenNote": "7.3.2",
+        "VignetteBuilder": "knitr",
+        "Config/build/compilation-database": "true",
+        "NeedsCompilation": "yes",
+        "Packaged": "2024-11-14 18:35:01 UTC; tomasz",
+        "Author": "Tomasz Kalinowski [ctb, cre],\n  Kevin Ushey [aut],\n  JJ Allaire [aut],\n  RStudio [cph, fnd],\n  Yuan Tang [aut, cph] (<https://orcid.org/0000-0001-5243-233X>),\n  Dirk Eddelbuettel [ctb, cph],\n  Bryan Lewis [ctb, cph],\n  Sigrid Keydana [ctb],\n  Ryan Hafen [ctb, cph],\n  Marcus Geelnard [ctb, cph] (TinyThread library,\n    http://tinythreadpp.bitsnbites.eu/)",
+        "Maintainer": "Tomasz Kalinowski <tomasz@posit.co>",
+        "Repository": "RSPM",
+        "Date/Publication": "2024-11-15 01:20:02 UTC",
+        "Built": "R 4.4.0; x86_64-pc-linux-gnu; 2024-11-15 04:07:48 UTC; unix"
+      }
+    },
     "rlang": {
       "Source": "CRAN",
       "Repository": "http://rspm/default/latest",
@@ -1266,6 +1446,33 @@
         "Repository": "RSPM",
         "Date/Publication": "2024-11-04 12:30:09 UTC",
         "Built": "R 4.4.0; ; 2024-11-05 04:07:36 UTC; unix"
+      }
+    },
+    "rprojroot": {
+      "Source": "CRAN",
+      "Repository": "http://rspm/default/latest",
+      "description": {
+        "Package": "rprojroot",
+        "Title": "Finding Files in Project Subdirectories",
+        "Version": "2.0.4",
+        "Authors@R": "\n    person(given = \"Kirill\",\n           family = \"M\\u00fcller\",\n           role = c(\"aut\", \"cre\"),\n           email = \"kirill@cynkra.com\",\n           comment = c(ORCID = \"0000-0002-1416-3412\"))",
+        "Description": "Robust, reliable and flexible paths to files below\n    a project root. The 'root' of a project is defined as a directory that\n    matches a certain criterion, e.g., it contains a certain regular file.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://rprojroot.r-lib.org/, https://github.com/r-lib/rprojroot",
+        "BugReports": "https://github.com/r-lib/rprojroot/issues",
+        "Depends": "R (>= 3.0.0)",
+        "Suggests": "covr, knitr, lifecycle, mockr, rlang, rmarkdown, testthat (>=\n3.0.0), withr",
+        "VignetteBuilder": "knitr",
+        "Config/testthat/edition": "3",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.2.3",
+        "NeedsCompilation": "no",
+        "Packaged": "2023-11-05 06:47:23 UTC; kirill",
+        "Author": "Kirill Müller [aut, cre] (<https://orcid.org/0000-0002-1416-3412>)",
+        "Maintainer": "Kirill Müller <kirill@cynkra.com>",
+        "Repository": "RSPM",
+        "Date/Publication": "2023-11-05 10:20:02 UTC",
+        "Built": "R 4.4.0; ; 2024-08-22 22:59:01 UTC; unix"
       }
     },
     "rsconnect": {
@@ -1601,7 +1808,10 @@
   },
   "files": {
     "app.R": {
-      "checksum": "d0ae8bbdf9d10d4285600f4dc67fa796"
+      "checksum": "f1d6ea086929b1ec035341f19bfd53c7"
+    },
+    "requirements.txt": {
+      "checksum": "6fa994a8ad344e5b2e0108ce0bbf5a2c"
     }
   },
   "users": null
