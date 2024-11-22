@@ -69,7 +69,8 @@ server <- function(input, output, session) {
       tryCatch({
         # Capture the update.packages() output
         update_result <- capture.output({
-          update.packages(lib.loc = lib_path, ask = FALSE, checkBuilt = TRUE)
+          update.packages(lib.loc = lib_path, repos="https://packagemanager.posit.co/cran/__linux__/jammy/latest
+", ask = FALSE, checkBuilt = TRUE)
         })
         
         # Create manifest file
