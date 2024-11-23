@@ -1355,37 +1355,6 @@
         "Built": "R 4.4.0; ; 2024-10-13 04:05:32 UTC; unix"
       }
     },
-    "reticulate": {
-      "Source": "CRAN",
-      "Repository": "http://rspm/default/latest",
-      "description": {
-        "Package": "reticulate",
-        "Type": "Package",
-        "Title": "Interface to 'Python'",
-        "Version": "1.40.0",
-        "Authors@R": "c(\n  person(\"Tomasz\", \"Kalinowski\", role = c(\"ctb\", \"cre\"),\n         email = \"tomasz@posit.co\"),\n  person(\"Kevin\", \"Ushey\", role = c(\"aut\"),\n         email = \"kevin@posit.co\"),\n  person(\"JJ\", \"Allaire\", role = c(\"aut\"), email = \"jj@posit.co\"),\n  person(\"RStudio\", role = c(\"cph\", \"fnd\")),\n  person(\"Yuan\", \"Tang\", role = c(\"aut\", \"cph\"),\n         email = \"terrytangyuan@gmail.com\",\n         comment = c(ORCID = \"0000-0001-5243-233X\")),\n  person(\"Dirk\", \"Eddelbuettel\", role = c(\"ctb\", \"cph\"),\n         email = \"edd@debian.org\"),\n  person(\"Bryan\", \"Lewis\", role = c(\"ctb\", \"cph\"),\n         email = \"blewis@illposed.net\"),\n  person(\"Sigrid\", \"Keydana\", role = c(\"ctb\"),\n         email = \"sigrid@posit.co\"),\n  person(\"Ryan\", \"Hafen\", role = c(\"ctb\", \"cph\"),\n         email = \"rhafen@gmail.com\"),\n  person(\"Marcus\", \"Geelnard\", role = c(\"ctb\", \"cph\"),\n         comment = \"TinyThread library, http://tinythreadpp.bitsnbites.eu/\")\n  )",
-        "Description": "Interface to 'Python' modules, classes, and functions. When calling\n    into 'Python', R data types are automatically converted to their equivalent 'Python'\n    types. When values are returned from 'Python' to R they are converted back to R\n    types. Compatible with all versions of 'Python' >= 2.7.",
-        "License": "Apache License 2.0",
-        "URL": "https://rstudio.github.io/reticulate/,\nhttps://github.com/rstudio/reticulate",
-        "BugReports": "https://github.com/rstudio/reticulate/issues",
-        "SystemRequirements": "Python (>= 2.7.0)",
-        "Encoding": "UTF-8",
-        "Depends": "R (>= 3.5)",
-        "Imports": "Matrix, Rcpp (>= 1.0.7), RcppTOML, graphics, here, jsonlite,\nmethods, png, rappdirs, utils, rlang, withr",
-        "Suggests": "callr, knitr, glue, cli, rmarkdown, pillar, testthat",
-        "LinkingTo": "Rcpp",
-        "RoxygenNote": "7.3.2",
-        "VignetteBuilder": "knitr",
-        "Config/build/compilation-database": "true",
-        "NeedsCompilation": "yes",
-        "Packaged": "2024-11-14 18:35:01 UTC; tomasz",
-        "Author": "Tomasz Kalinowski [ctb, cre],\n  Kevin Ushey [aut],\n  JJ Allaire [aut],\n  RStudio [cph, fnd],\n  Yuan Tang [aut, cph] (<https://orcid.org/0000-0001-5243-233X>),\n  Dirk Eddelbuettel [ctb, cph],\n  Bryan Lewis [ctb, cph],\n  Sigrid Keydana [ctb],\n  Ryan Hafen [ctb, cph],\n  Marcus Geelnard [ctb, cph] (TinyThread library,\n    http://tinythreadpp.bitsnbites.eu/)",
-        "Maintainer": "Tomasz Kalinowski <tomasz@posit.co>",
-        "Repository": "RSPM",
-        "Date/Publication": "2024-11-15 01:20:02 UTC",
-        "Built": "R 4.4.0; x86_64-pc-linux-gnu; 2024-11-15 04:07:48 UTC; unix"
-      }
-    },
     "rlang": {
       "Source": "CRAN",
       "Repository": "http://rspm/default/latest",
