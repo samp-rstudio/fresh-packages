@@ -75,6 +75,7 @@ server <- function(input, output, session) {
        content = content_base64,
        sha = if(length(repo_info) > 0) repo_info$sha else NULL)
     
+    print("Updated https://github.com/samp-rstudio/fresh-packages/contents/manifest.json")
   }
 
   output$push_text <- renderText({
