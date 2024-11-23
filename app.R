@@ -6,14 +6,14 @@ library(rsconnect)
 library(gh)
 library(base64enc)
 library(duckdb)
-library(dplyr)
+library(tidyverse)
 library(reticulate)
 
 ui <- page_sidebar(
   title = "Installed R Packages",
   sidebar = sidebar(
     card(
-      actionButton("update_btn", "Update All Packages", 
+      actionButton("update_btn", "Update R Packages", 
                    class = "btn-primary btn-lg",
                    width = "100%")
     ),
@@ -118,7 +118,7 @@ server <- function(input, output, session) {
   # Status message output
   output$status_text <- renderText({
     if (input$update_btn == 0) {
-      "Click the button'Update All Packages' to start updating packages."
+      "Click the button'Update R Packages' to start updating packages."
     } else {
       # Create a progress object
       progress <- Progress$new(session, min = 0, max = 1)
