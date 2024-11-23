@@ -5,6 +5,8 @@ library(utils)
 library(rsconnect)
 library(gh)
 library(base64enc)
+library(duckdb)
+library(reticulate)
 
 ui <- page_sidebar(
   title = "Installed R Packages",
@@ -18,13 +20,27 @@ ui <- page_sidebar(
       actionButton("update_btn", "Update All Packages", 
                    class = "btn-primary btn-lg",
                    width = "100%")
+    ),
+    card(
+      actionButton("push_btn", "Push to git", 
+                   class = "btn-primary btn-lg",
+                   width = "100%")
     )
-    
   ),
   
   card(
     card_header("Update Status"),
     textOutput("status_text")
+  ),
+  
+  card(
+    card_header("Diff Status"),
+    textOutput("diff_text")
+  ),
+  
+  card(
+    card_header("Push Status"),
+    textOutput("push_text")
   ),
   
   card(
@@ -54,6 +70,17 @@ server <- function(input, output, session) {
        content = content_base64,
        sha = if(length(repo_info) > 0) repo_info$sha else NULL)
   }
+
+  output$push_text <- renderText({
+    if (input$push_btn == 0) {
+      "Click the button to start updating packages."
+    } else {
+      progress$set(message = "Pushing to GitHub...", value = 0.8)
+      
+      # Push to GitHub
+      push_manifest_to_github()
+    }
+  })
   
   # Status message output
   output$status_text <- renderText({
@@ -65,25 +92,27 @@ server <- function(input, output, session) {
       progress$set(message = "Updating packages...", value = 0.3)
       
       # Try to update all packages
-      # Capture the update.packages() output
-      update_result <- capture.output({
-        update.packages(lib.loc = lib_path, repos="https://packagemanager.posit.co/cran/__linux__/jammy/latest", ask = FALSE, checkBuilt = TRUE)
-      })
-      
-      # Create manifest file
-      rsconnect::writeManifest(appDir = ".")
-      
-      progress$set(message = "Pushing to GitHub...", value = 0.8)
-      
-      # Push to GitHub
-      push_manifest_to_github()
-      
-      progress$set(value = 1)
-      progress$close()
+      tryCatch({
+        # Capture the update.packages() output
+        update_result <- capture.output({
+          update.packages(lib.loc = lib_path, repos="https://packagemanager.posit.co/cran/__linux__/jammy/latest
+", ask = FALSE, checkBuilt = TRUE)
+        })
+        
+        # Create manifest file
+        rsconnect::writeManifest(appDir = ".")
+        
+        progress$set(value = 1)
+        progress$close()
 
-      # Return status message
-      paste("Package update completed at", format(Sys.time(), "%H:%M:%S"), 
-            "\nCheck the R console for detailed information.")
+        # Return status message
+        paste("Package update completed at", format(Sys.time(), "%H:%M:%S"), 
+              "\nCheck the R console for detailed information.")
+      }, 
+      error = function(e) {
+        progress$close()
+        paste("Error updating packages:", e$message)
+      })
     }
   })
   
