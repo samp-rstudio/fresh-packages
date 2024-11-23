@@ -80,8 +80,6 @@ server <- function(input, output, session) {
     if (input$push_btn == 0) {
       "Click the button 'Push to GitHub' to save manifest.json to GitHub"
     } else {
-      progress$set(message = "Pushing to GitHub...", value = 0.8)
-      
       # Push to GitHub
       push_manifest_to_github()
     }
