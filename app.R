@@ -30,6 +30,11 @@ ui <- page_sidebar(
       actionButton("push_btn", "Push to GitHub", 
                    class = "btn-primary btn-lg",
                    width = "100%")
+    ),
+    card(
+      actionButton("pip_btn", "Pip list", 
+                   class = "btn-primary btn-lg",
+                   width = "100%")
     )
   ),
   
@@ -46,6 +51,11 @@ ui <- page_sidebar(
   card(
     card_header("Push Status"),
     textOutput("push_text")
+  ),
+  
+  card(
+    card_header("Python packages"),
+    verbatimTextOutput("pip_text")
   ),
   
   card(
@@ -92,6 +102,15 @@ server <- function(input, output, session) {
       "Click the button 'Compare manifest.json' to check if the manifest changed."
     } else {
       o <- system("diff manifest.prev manifest.json", intern=TRUE)
+      paste(o, collapse="\n")
+    }
+  })
+  
+  output$pip_text <- renderText({
+    if (input$pip_btn == 0) {
+      "Click the button 'Python Packages' to see the list of installed python packages."
+    } else {
+      o <- system("python -m pip list", intern=TRUE)
       paste(o, collapse="\n")
     }
   })
