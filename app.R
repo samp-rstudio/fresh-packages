@@ -5,7 +5,6 @@ library(utils)
 library(rsconnect)
 library(gh)
 library(base64enc)
-library(reticulate)
 
 ui <- page_sidebar(
   title = "Installed R Packages",
