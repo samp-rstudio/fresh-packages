@@ -10,7 +10,7 @@ library(tidyverse)
 library(reticulate)
 
 ui <- page_sidebar(
-  title = "Installed R Packages",
+  title = "R and Python Packages",
   sidebar = sidebar(
     card(
       actionButton("update_btn", "Update R Packages", 
