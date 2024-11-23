@@ -11,11 +11,6 @@ library(reticulate)
 ui <- page_sidebar(
   title = "Installed R Packages",
   sidebar = sidebar(
-    selectInput("sort_by", "Sort by",
-                choices = c("Package Name" = "Package", "Version"),
-                selected = "Package"
-    ),
-    checkboxInput("reverse", "Reverse order", FALSE),
     card(
       actionButton("update_btn", "Update All Packages", 
                    class = "btn-primary btn-lg",
@@ -28,11 +23,6 @@ ui <- page_sidebar(
     ),
     card(
       actionButton("push_btn", "Push to GitHub", 
-                   class = "btn-primary btn-lg",
-                   width = "100%")
-    ),
-    card(
-      actionButton("pip_btn", "Pip list", 
                    class = "btn-primary btn-lg",
                    width = "100%")
     )
@@ -53,14 +43,13 @@ ui <- page_sidebar(
     textOutput("push_text")
   ),
   
-  card(
-    card_header("Python packages"),
-    verbatimTextOutput("pip_text")
-  ),
-  
-  card(
-    card_header("Installed Packages and Versions"),
-    DT::dataTableOutput("packages_table")
+  navset_card_underline(
+    title = "Installed Packages",
+    # Panel with plot ----
+    nav_panel("Python", DT::dataTableOutput("pip_table")),
+    
+    # Panel with summary ----
+    nav_panel("R", DT::dataTableOutput("packages_table"))
   )
 )
 
@@ -106,13 +95,23 @@ server <- function(input, output, session) {
     }
   })
   
-  output$pip_text <- renderText({
-    if (input$pip_btn == 0) {
-      "Click the button 'Python Packages' to see the list of installed python packages."
-    } else {
-      o <- system("python -m pip list", intern=TRUE)
-      paste(o, collapse="\n")
-    }
+  output$pip_table <- DT::renderDataTable({
+    system("python -m pip freeze > pip_list.txt", intern=TRUE)
+    pip_output <- readLines("pip_list.txt")
+    
+    packages_df <- do.call(rbind, strsplit(pip_output, "=="))
+    packages_df <- as.data.frame(packages_df)
+    
+    # Add column names
+    colnames(packages_df) <- c("Package", "Version")
+    packages_df <- packages_df[order(packages_df[["Package"]]), ]
+    
+    DT::datatable(packages_df, 
+              filter = "top",
+              options = list(
+                pageLength = 100,
+                searchHighligh = TRUE
+              ))    
   })
   
   # Status message output
@@ -149,12 +148,7 @@ server <- function(input, output, session) {
   packages_data <- reactive({
     pkg_data <- as.data.frame(installed.packages()[, c("Package", "Version")])
     
-    # Sort based on user selection
-    if (input$reverse) {
-      pkg_data[order(pkg_data[[input$sort_by]], decreasing = TRUE), ]
-    } else {
-      pkg_data[order(pkg_data[[input$sort_by]]), ]
-    }
+    pkg_data[order(pkg_data[["Package"]]), ]
   })
   
   # Render the data table
@@ -162,7 +156,7 @@ server <- function(input, output, session) {
     DT::datatable(
       packages_data(),
       options = list(
-        pageLength = 15,
+        pageLength = 100,
         searchHighlight = TRUE
       ),
       filter = "top"
