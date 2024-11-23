@@ -22,7 +22,12 @@ ui <- page_sidebar(
                    width = "100%")
     ),
     card(
-      actionButton("push_btn", "Push to git", 
+      actionButton("diff_btn", "Compare manifest.json", 
+                   class = "btn-primary btn-lg",
+                   width = "100%")
+    ),
+    card(
+      actionButton("push_btn", "Push to GitHub", 
                    class = "btn-primary btn-lg",
                    width = "100%")
     )
@@ -35,7 +40,7 @@ ui <- page_sidebar(
   
   card(
     card_header("Diff Status"),
-    textOutput("diff_text")
+    verbatimTextOutput("diff_text")
   ),
   
   card(
@@ -73,7 +78,7 @@ server <- function(input, output, session) {
 
   output$push_text <- renderText({
     if (input$push_btn == 0) {
-      "Click the button to start updating packages."
+      "Click the button 'Push to GitHub' to save manifest.json to GitHub"
     } else {
       progress$set(message = "Pushing to GitHub...", value = 0.8)
       
@@ -82,37 +87,42 @@ server <- function(input, output, session) {
     }
   })
   
+  output$diff_text <- renderText({
+    if (input$diff_btn == 0) {
+      "Click the button 'Compare manifest.json' to check if the manifest changed."
+    } else {
+      o <- system("diff manifest.prev manifest.json", intern=TRUE)
+      paste(o, collapse="\n")
+    }
+  })
+  
   # Status message output
   output$status_text <- renderText({
     if (input$update_btn == 0) {
-      "Click the button to start updating packages."
+      "Click the button'Update All Packages' to start updating packages."
     } else {
       # Create a progress object
       progress <- Progress$new(session, min = 0, max = 1)
       progress$set(message = "Updating packages...", value = 0.3)
       
-      # Try to update all packages
-      tryCatch({
-        # Capture the update.packages() output
-        update_result <- capture.output({
-          update.packages(lib.loc = lib_path, repos="https://packagemanager.posit.co/cran/__linux__/jammy/latest
+      # Capture the update.packages() output
+      update_result <- capture.output({
+        update.packages(lib.loc = lib_path, repos="https://packagemanager.posit.co/cran/__linux__/jammy/latest
 ", ask = FALSE, checkBuilt = TRUE)
-        })
-        
-        # Create manifest file
-        rsconnect::writeManifest(appDir = ".")
-        
-        progress$set(value = 1)
-        progress$close()
-
-        # Return status message
-        paste("Package update completed at", format(Sys.time(), "%H:%M:%S"), 
-              "\nCheck the R console for detailed information.")
-      }, 
-      error = function(e) {
-        progress$close()
-        paste("Error updating packages:", e$message)
       })
+      
+      # save old manifest
+      system("cp manifest.json manifest.prev", intern=TRUE)
+      
+      # Create manifest file
+      rsconnect::writeManifest(appDir = ".", appFiles = c("app.R", "requirements.txt"))
+      
+      progress$set(value = 1)
+      progress$close()
+
+      # Return status message
+      paste("Package update completed at", format(Sys.time(), "%H:%M:%S"), 
+            "\nCheck the R console for detailed information.")
     }
   })
   
