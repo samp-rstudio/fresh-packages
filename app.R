@@ -6,6 +6,7 @@ library(rsconnect)
 library(gh)
 library(base64enc)
 library(duckdb)
+library(dplyr)
 library(reticulate)
 
 ui <- page_sidebar(
@@ -96,10 +97,10 @@ server <- function(input, output, session) {
   })
   
   output$pip_table <- DT::renderDataTable({
-    system("python -m pip freeze > pip_list.txt", intern=TRUE)
+    system("python -m pip list | tail -n +3 > pip_list.txt", intern=TRUE)
     pip_output <- readLines("pip_list.txt")
     
-    packages_df <- do.call(rbind, strsplit(pip_output, "=="))
+    packages_df <- do.call(rbind, strsplit(pip_output, "\\s+"))
     packages_df <- as.data.frame(packages_df)
     
     # Add column names
