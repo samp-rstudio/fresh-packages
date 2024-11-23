@@ -60,20 +60,27 @@ server <- function(input, output, session) {
   # Function to push manifest to GitHub
   push_manifest_to_github <- function() {
     # Read the manifest file
+    print("read manifest")
     manifest_content <- readLines("manifest.json", warn = FALSE)
+    print("add newline")
     manifest_content <- paste(manifest_content, collapse = "\n")
     
+    print("encode")
     # Encode content in base64
     content_base64 <- base64encode(charToRaw(manifest_content))
     
+    print("get sha")
     # Get current commit SHA to use as parent
     repo_info <- gh("/repos/samp-rstudio/fresh-packages/contents/manifest.json")
     
+    print("update file")
     # Create or update file in GitHub
     gh("PUT /repos/samp-rstudio/fresh-packages/contents/manifest.json",
        message = "Update manifest.json",
        content = content_base64,
        sha = if(length(repo_info) > 0) repo_info$sha else NULL)
+    
+    print("done")
   }
 
   output$push_text <- renderText({
