@@ -9,3 +9,4 @@ bokeh
 numpy
 duckdb
 polars
+pip
