@@ -66,31 +66,25 @@ server <- function(input, output, session) {
       progress$set(message = "Updating packages...", value = 0.3)
       
       # Try to update all packages
-      tryCatch({
-        # Capture the update.packages() output
-        update_result <- capture.output({
-          update.packages(lib.loc = lib_path, repos="https://packagemanager.posit.co/cran/__linux__/jammy/latest", ask = FALSE, checkBuilt = TRUE)
-        })
-        
-        # Create manifest file
-        rsconnect::writeManifest(appDir = ".")
-        
-        progress$set(message = "Pushing to GitHub...", value = 0.8)
-        
-        # Push to GitHub
-        push_manifest_to_github()
-        
-        progress$set(value = 1)
-        progress$close()
-
-        # Return status message
-        paste("Package update completed at", format(Sys.time(), "%H:%M:%S"), 
-              "\nCheck the R console for detailed information.")
-      }, 
-      error = function(e) {
-        progress$close()
-        paste("Error updating packages:", e$message)
+      # Capture the update.packages() output
+      update_result <- capture.output({
+        update.packages(lib.loc = lib_path, repos="https://packagemanager.posit.co/cran/__linux__/jammy/latest", ask = FALSE, checkBuilt = TRUE)
       })
+      
+      # Create manifest file
+      rsconnect::writeManifest(appDir = ".")
+      
+      progress$set(message = "Pushing to GitHub...", value = 0.8)
+      
+      # Push to GitHub
+      push_manifest_to_github()
+      
+      progress$set(value = 1)
+      progress$close()
+
+      # Return status message
+      paste("Package update completed at", format(Sys.time(), "%H:%M:%S"), 
+            "\nCheck the R console for detailed information.")
     }
   })
   
