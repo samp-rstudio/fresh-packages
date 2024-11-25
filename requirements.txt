@@ -9,5 +9,5 @@ bokeh
 numpy
 duckdb
 polars
-great_tables
+great_tables==0.13.0
 pip
