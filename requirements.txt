@@ -9,4 +9,5 @@ bokeh
 numpy
 duckdb
 polars
+great_tables
 pip
