@@ -13,7 +13,7 @@
     "version": "3.11.4",
     "package_manager": {
       "name": "pip",
-      "version": "24.3.1",
+      "version": "25.0.1",
       "package_file": "requirements.txt"
     }
   },
@@ -136,7 +136,7 @@
         "Maintainer": "Martin Maechler <mmaechler+Matrix@gmail.com>",
         "Repository": "CRAN",
         "Date/Publication": "2024-04-26 12:03:02 UTC",
-        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 21:51:06 UTC; unix"
+        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 21:53:49 UTC; unix"
       }
     },
     "PKI": {
@@ -257,7 +257,7 @@
         "Packaged": "2023-01-29 21:10:46 UTC; edd",
         "Repository": "CRAN",
         "Date/Publication": "2023-01-29 22:12:06",
-        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 21:52:29 UTC; unix"
+        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2025-01-25 08:58:54 UTC; unix"
       }
     },
     "askpass": {
@@ -508,7 +508,7 @@
         "Maintainer": "Winston Chang <winston@posit.co>",
         "Repository": "CRAN",
         "Date/Publication": "2024-05-16 09:50:11 UTC",
-        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:09:25 UTC; unix"
+        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:09:26 UTC; unix"
       }
     },
     "callr": {
@@ -902,7 +902,7 @@
         "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
         "Repository": "CRAN",
         "Date/Publication": "2024-08-19 14:10:07 UTC",
-        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:07:00 UTC; unix"
+        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:07:02 UTC; unix"
       }
     },
     "dplyr": {
@@ -989,7 +989,7 @@
         "Maintainer": "Kirill Müller <kirill@cynkra.com>",
         "Repository": "CRAN",
         "Date/Publication": "2024-10-30 09:50:02 UTC",
-        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 21:50:21 UTC; unix"
+        "Built": "R 4.4.0; x86_64-pc-linux-gnu; 2024-12-05 23:45:13 UTC; unix"
       }
     },
     "evaluate": {
@@ -1095,7 +1095,7 @@
         "Maintainer": "Winston Chang <winston@posit.co>",
         "Repository": "CRAN",
         "Date/Publication": "2024-05-15 09:00:07 UTC",
-        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:06:40 UTC; unix"
+        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:06:46 UTC; unix"
       }
     },
     "fontawesome": {
@@ -1487,7 +1487,7 @@
         "Maintainer": "Hadley Wickham <hadley@posit.co>",
         "Repository": "CRAN",
         "Date/Publication": "2023-11-30 15:10:02 UTC",
-        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:52:57 UTC; unix"
+        "Built": "R 4.4.0; x86_64-pc-linux-gnu; 2025-02-03 11:16:34 UTC; unix"
       }
     },
     "here": {
@@ -1663,7 +1663,7 @@
         "Maintainer": "Winston Chang <winston@posit.co>",
         "Repository": "CRAN",
         "Date/Publication": "2024-03-26 05:50:06 UTC",
-        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:17:53 UTC; unix"
+        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2025-01-31 21:28:00 UTC; unix"
       }
     },
     "httr": {
@@ -1722,7 +1722,7 @@
         "Maintainer": "Hadley Wickham <hadley@posit.co>",
         "Repository": "CRAN",
         "Date/Publication": "2024-11-04 16:30:02 UTC",
-        "Built": "R 4.4.2; ; 2024-12-02 21:50:49 UTC; unix"
+        "Built": "R 4.4.2; ; 2024-12-04 05:55:09 UTC; unix"
       }
     },
     "ids": {
@@ -1851,7 +1851,7 @@
         "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>),\n  Duncan Temple Lang [ctb],\n  Lloyd Hilaiel [cph] (author of bundled libyajl)",
         "Repository": "CRAN",
         "Date/Publication": "2024-09-20 08:40:14 UTC",
-        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:13:28 UTC; unix"
+        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:13:30 UTC; unix"
       }
     },
     "knitr": {
@@ -1931,7 +1931,7 @@
         "Maintainer": "Winston Chang <winston@posit.co>",
         "Repository": "CRAN",
         "Date/Publication": "2023-12-06 09:10:05 UTC",
-        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:10:13 UTC; unix"
+        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2025-01-31 21:26:36 UTC; unix"
       }
     },
     "lattice": {
@@ -2101,7 +2101,7 @@
         "Maintainer": "Winston Chang <winston@rstudio.com>",
         "Repository": "CRAN",
         "Date/Publication": "2021-11-26 16:11:10 UTC",
-        "Built": "R 4.4.2; ; 2024-12-02 20:13:07 UTC; unix"
+        "Built": "R 4.4.2; ; 2024-12-02 20:13:09 UTC; unix"
       }
     },
     "mgcv": {
@@ -2479,7 +2479,7 @@
         "Maintainer": "Joe Cheng <joe@posit.co>",
         "Repository": "CRAN",
         "Date/Publication": "2024-04-05 15:00:06 UTC",
-        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:16:22 UTC; unix"
+        "Built": "R 4.4.1; x86_64-pc-linux-gnu; 2025-01-22 22:52:56 UTC; unix"
       }
     },
     "ps": {
@@ -2508,7 +2508,7 @@
         "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
         "Repository": "CRAN",
         "Date/Publication": "2024-10-28 22:10:02 UTC",
-        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:20:33 UTC; unix"
+        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-04 00:51:13 UTC; unix"
       }
     },
     "purrr": {
@@ -2539,7 +2539,7 @@
         "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
         "Repository": "CRAN",
         "Date/Publication": "2023-08-10 08:20:07 UTC",
-        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:21:18 UTC; unix"
+        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-05 20:40:19 UTC; unix"
       }
     },
     "ragg": {
@@ -2569,7 +2569,7 @@
         "Author": "Thomas Lin Pedersen [cre, aut]\n    (<https://orcid.org/0000-0002-5147-4711>),\n  Maxim Shemanarev [aut, cph] (Author of AGG),\n  Tony Juricic [ctb, cph] (Contributor to AGG),\n  Milan Marusinec [ctb, cph] (Contributor to AGG),\n  Spencer Garrett [ctb] (Contributor to AGG),\n  Posit, PBC [cph, fnd]",
         "Repository": "CRAN",
         "Date/Publication": "2024-09-11 17:50:02 UTC",
-        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:48:50 UTC; unix"
+        "Built": "R 4.4.1; x86_64-pc-linux-gnu; 2025-02-12 13:56:18 UTC; unix"
       }
     },
     "rappdirs": {
@@ -2629,7 +2629,7 @@
         "Maintainer": "Jennifer Bryan <jenny@posit.co>",
         "Repository": "CRAN",
         "Date/Publication": "2024-01-10 23:20:02 UTC",
-        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:40:17 UTC; unix"
+        "Built": "R 4.4.0; x86_64-pc-linux-gnu; 2024-12-06 18:02:55 UTC; unix"
       }
     },
     "readxl": {
@@ -2660,7 +2660,7 @@
         "Maintainer": "Jennifer Bryan <jenny@posit.co>",
         "Repository": "CRAN",
         "Date/Publication": "2023-07-06 22:00:09 UTC",
-        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:48:09 UTC; unix"
+        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2025-01-22 17:08:14 UTC; unix"
       }
     },
     "rematch": {
@@ -2804,7 +2804,7 @@
         "Maintainer": "Tomasz Kalinowski <tomasz@posit.co>",
         "Repository": "CRAN",
         "Date/Publication": "2024-11-15 01:20:02 UTC",
-        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 21:57:43 UTC; unix"
+        "Built": "R 4.4.1; x86_64-pc-linux-gnu; 2025-01-16 22:08:06 UTC; unix"
       }
     },
     "rlang": {
@@ -2835,7 +2835,7 @@
         "Maintainer": "Lionel Henry <lionel@posit.co>",
         "Repository": "CRAN",
         "Date/Publication": "2024-06-04 09:45:03 UTC",
-        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:06:07 UTC; unix"
+        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:06:09 UTC; unix"
       }
     },
     "rmarkdown": {
@@ -3009,7 +3009,7 @@
         "Maintainer": "Carson Sievert <carson@rstudio.com>",
         "Repository": "CRAN",
         "Date/Publication": "2024-03-15 22:30:02 UTC",
-        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:10:49 UTC; unix"
+        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:11:00 UTC; unix"
       }
     },
     "scales": {
@@ -3235,7 +3235,7 @@
         "Maintainer": "Thomas Lin Pedersen <thomas.pedersen@posit.co>",
         "Repository": "CRAN",
         "Date/Publication": "2024-05-15 11:10:03 UTC",
-        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:25:58 UTC; unix"
+        "Built": "R 4.4.1; x86_64-pc-linux-gnu; 2024-12-29 01:53:17 UTC; unix"
       }
     },
     "textshaping": {
@@ -3264,7 +3264,7 @@
         "Maintainer": "Thomas Lin Pedersen <thomas.pedersen@posit.co>",
         "Repository": "CRAN",
         "Date/Publication": "2024-05-24 09:00:03 UTC",
-        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:38:24 UTC; unix"
+        "Built": "R 4.4.0; x86_64-pc-linux-gnu; 2025-02-11 19:48:13 UTC; unix"
       }
     },
     "tibble": {
@@ -3329,7 +3329,7 @@
         "Maintainer": "Hadley Wickham <hadley@posit.co>",
         "Repository": "CRAN",
         "Date/Publication": "2024-01-24 14:50:09 UTC",
-        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:26:50 UTC; unix"
+        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2025-01-03 22:48:26 UTC; unix"
       }
     },
     "tidyselect": {
@@ -3415,7 +3415,7 @@
         "Maintainer": "Vitalie Spinu <spinuvit@gmail.com>",
         "Repository": "CRAN",
         "Date/Publication": "2024-01-18 09:20:02 UTC",
-        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:39:30 UTC; unix"
+        "Built": "R 4.4.0; x86_64-pc-linux-gnu; 2024-12-06 17:58:12 UTC; unix"
       }
     },
     "tinytex": {
@@ -3470,7 +3470,7 @@
         "Maintainer": "Davis Vaughan <davis@posit.co>",
         "Repository": "CRAN",
         "Date/Publication": "2023-05-12 23:00:02 UTC",
-        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:22:43 UTC; unix"
+        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2025-01-16 14:08:39 UTC; unix"
       }
     },
     "utf8": {
@@ -3609,7 +3609,7 @@
         "Maintainer": "Jennifer Bryan <jenny@posit.co>",
         "Repository": "CRAN",
         "Date/Publication": "2023-12-05 23:50:02 UTC",
-        "Built": "R 4.4.2; x86_64-pc-linux-gnu; 2024-12-02 20:27:42 UTC; unix"
+        "Built": "R 4.4.1; x86_64-pc-linux-gnu; 2025-01-10 13:54:07 UTC; unix"
       }
     },
     "withr": {
